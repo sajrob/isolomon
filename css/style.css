@@ -2,8 +2,7 @@
 /*
 /*	Copyright (c) 2018 Marketify
 /*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-    Modified by Solomon Roberts
+/*	Modified by Solomon Roberts for his personal website.
 
 
 	01) Solomon BASE
@@ -21,7 +20,8 @@
 	13) Solomon CONTACT
 	14) Solomon FOOTER
 	15) Solomon TO TOP
-	16) Solomon MEDIA QUERIES (FOR SMALL DEVIVES)
+	16) Relevant styles for the Kushe! hover reveal
+	17) Solomon MEDIA QUERIES (FOR SMALL DEVIVES)
 	
 
 /*---------------------------------------------------*/
@@ -1697,7 +1697,49 @@ img.svg{
 
 
 /*---------------------------------------------------*/
-/*	16) Solomon MEDIA QUERIES (FOR SMALL DEVIVES)
+/*	16) Relevant styles for the Kushe! hover reveal
+/*---------------------------------------------------*/
+
+.img__wrap {
+	position: relative;
+	height: 50px;
+	width: 250px;
+  }
+  
+  .img__description_layer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0);
+	color: #00adb5;
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  
+	/* transition effect. not necessary */
+	transition: opacity 0.2s, visibility 0.2s;
+  }
+  
+  .img__wrap:hover .img__description_layer {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .img__description {
+	transition: 0.2s;
+	transform: translateY(1em);
+  }
+  
+  .img__wrap:hover .img__description {
+	transform: translateY(0);
+  }
+
+/*---------------------------------------------------*/
+/*	17) Solomon MEDIA QUERIES (FOR SMALL DEVIVES)
 /*---------------------------------------------------*/
 
 @media (max-width: 1400px) {
